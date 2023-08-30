@@ -24,7 +24,7 @@
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-// const mnemonic = <mnemonic>;
+ const mnemonic = '';
 // const privateKeyTest = <private_key>;
 
 
@@ -77,7 +77,7 @@ module.exports = {
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
     avalanche: {
-      provider: () => new HDWalletProvider('', ''),
+      provider: () => new HDWalletProvider('', `https://avalanche-fuji.infura.io/v3/<API_KEY>`),
       network_id: 43113,
       pollingInterval: 15000,
       //networkCheckTimeout: 60000,
