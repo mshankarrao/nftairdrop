@@ -76,15 +76,15 @@ module.exports = {
     // network_id: 2111,   // This network is yours, in the cloud.
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
-    fuji: {
-      provider: () => {
-        return new HDWalletProvider({
-          mnemonic,
-          providerOrUrl: 'https://api.avax-test.network/', // 
-          derivationPath: `ext/C/rpc`
-        });
-      },
-      network_id: 43113, // 1666600000 for mainnet
+    avalanche: {
+      provider: () => new HDWalletProvider('', ''),
+      network_id: 43113,
+      pollingInterval: 15000,
+      //networkCheckTimeout: 60000,
+      networkCheckTimeoutnetworkCheckTimeout: 10000,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
     },
     testnet: {
       provider: () => {
@@ -129,13 +129,13 @@ module.exports = {
   // $ truffle migrate --reset --compile-all
   //
   // db: {
-    // enabled: false,
-    // host: "127.0.0.1",
-    // adapter: {
-    //   name: "sqlite",
-    //   settings: {
-    //     directory: ".db"
-    //   }
-    // }
+  // enabled: false,
+  // host: "127.0.0.1",
+  // adapter: {
+  //   name: "sqlite",
+  //   settings: {
+  //     directory: ".db"
+  //   }
+  // }
   // }
 };
