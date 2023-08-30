@@ -1,5 +1,15 @@
 # nftairdrop
-NFT implementation with automatic airdop of native token whenever someone buy the NFT
+### NFT implementation with automatic airdop of native token whenever someone buy the NFT
+
+## Deployed Contracts to the Avalanche FUJI Network:
+
+### Token contract
+The Token Contract which will be airdropped, the explorer link is below
+https://testnet.snowtrace.io/tx/0x3a1482ce2c5d8bbbf531d60d0f52daec61adb9e0bb378b27b8a2b00e455ceebf
+
+### NFT Contract
+This is the NFT contract where all the magic happens, that is the automatic airdropping of the above tokens whenever a user buys the NFT
+https://testnet.snowtrace.io/tx/0x3181907019d37e313b42288ce2a5707d127bd55f0906dfdcd8f56fcb60344008
 
 <img src="https://trufflesuite.com/img/truffle-logo-dark.svg" width="200">
 
